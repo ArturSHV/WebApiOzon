@@ -1,0 +1,25 @@
+﻿<Window x:Class="WPF_API_OZON.ProductInfoPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_API_OZON"
+        mc:Ignorable="d"
+        Title="ProductInfoPage" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid ItemsSource="{Binding productInfo}" AutoGenerateColumns="False" IsSynchronizedWithCurrentItem="True" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" Binding="{Binding id}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="name" Binding="{Binding name}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="offer_id" Binding="{Binding offer_id}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="price" Binding="{Binding price}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="recommended_price" Binding="{Binding recommended_price}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="images" Binding="{Binding images}" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
