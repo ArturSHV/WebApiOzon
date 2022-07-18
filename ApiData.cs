@@ -89,8 +89,8 @@ namespace WPF_API_OZON
         {
             RestRequest request = new RestRequest(url, Method.Post);
             request.AddHeader("Host", "api-seller.ozon.ru");
-            request.AddHeader("Client-Id", ClientId); //"117208"
-            request.AddHeader("Api-Key", ApiKey); //"9efde3ca-8ac6-4b30-bc7e-566e2dc3f7fe"
+            request.AddHeader("Client-Id", ClientId); 
+            request.AddHeader("Api-Key", ApiKey); 
             request.AddHeader("Content-Type", "application/json");
 
             return request;
